@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="hello_world_text">Welcome</string>
+    <string name="Button_one">click me</string>
+    <string name="button_two">click me</string>
+    <string name="Button_three">Click Me</string>
 </resources>
