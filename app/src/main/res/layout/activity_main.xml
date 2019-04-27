@@ -30,6 +30,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="100dp"
         android:text="@string/Button_one"
+        android:onClick="buttonOne"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -41,6 +42,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="100dp"
         android:text="@string/button_two"
+        android:onClick="test"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent" />
 
