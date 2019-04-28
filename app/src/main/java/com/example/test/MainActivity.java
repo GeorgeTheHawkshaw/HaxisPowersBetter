@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
         Integer count = Integer.parseInt(countString);
         count++;
 
-        countView.setText(count.toString());
+        countView.setText(Integer.toString(count));
     }
 }
