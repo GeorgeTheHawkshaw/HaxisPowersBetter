@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private Button logoutButton;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,15 +19,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         logoutButton = (Button)findViewById(R.id.btnLogout);
-
         logoutButton.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnLogout:
-
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+                startActivity(new Intent(this,Login.class));
                 break;
         }
     }
