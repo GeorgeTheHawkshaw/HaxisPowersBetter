@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="Dashboard_text">Dashboard:</string>
+    <string name="Update_text">You are using APPNAME version p1.0!</string>
+    <string name="Appliance_text">~~connected appliances go here~~</string>
+    <string name="Welcome_text">Welcome, USERNAME!</string>
 </resources>
