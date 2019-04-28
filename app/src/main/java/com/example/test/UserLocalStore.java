@@ -12,7 +12,7 @@ public class UserLocalStore {
         userLocalDatabase = context.getSharedPreferences(SP_NAME,0);
     }
 
-    public void storedUserData(User user){
+    public void storeUserData(User user){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putString("name",user.name);
         spEditor.putString("username",user.username);
@@ -32,6 +32,14 @@ public class UserLocalStore {
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putBoolean("loggedIn",loggedIn);
         spEditor.commit();
+    }
+
+    public boolean getUserLoggedIn(){
+        if(userLocalDatabase.getBoolean("loggedIn",false) == true){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void clearUserData(){
