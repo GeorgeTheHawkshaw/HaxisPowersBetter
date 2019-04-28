@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="hello_world_text">Welcome</string>
+    <string name="Button_one">click me</string>
+    <string name="button_two">click me</string>
+    <string name="Button_three">Add Application</string>
+    <string name="enter_appliance_name_text">Enter Appliance name</string>
+    <string name="Number_text">0</string>
+    <string name="textviewtwo_text">TextView</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="Dashboard_text">Dashboard:</string>
     <string name="Update_text">You are using APPNAME version p1.0!</string>
