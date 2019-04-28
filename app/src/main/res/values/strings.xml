@@ -5,4 +5,6 @@
     <string name="button_two">click me</string>
     <string name="Button_three">Click Me</string>
     <string name="enter_appliance_name_text">Enter Appliance name</string>
+    <string name="Number_text">0</string>
+    <string name="textviewtwo_text">TextView</string>
 </resources>
