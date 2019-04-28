@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         b1.show();
     }
     public void test(View view){
-        TextView countView = (TextView)findViewById(R.id.textView);
+        TextView countView = (TextView) findViewById(R.id.textView);
 
         String countString = countView.getText().toString();
 
