@@ -13,19 +13,44 @@ import java.util.*;
 import android.widget.ArrayAdapter;
 import android.content.Intent;
 import android.widget.Toast;
+import android.app.Activity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity implements
+AdapterView.OnItemSelectedListener {
     List<String> appliance_names = new ArrayList<String>();
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final Spinner spin = (Spinner) findViewById(R.id.spinner2);
-        Button button = (Button) findViewById(R.id.button3);
 
-        spin.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        Button b1 = (Button)findViewById(R.id.button3);
+        final EditText etEnter = (EditText)findViewById(R.id.etEnter);
+        spin.setOnItemSelectedListener(this);
+
+        appliance_names.add("Microwave Oven");
+        appliance_names.add("Air Conditioner");
+        appliance_names.add("Washing machine");
+        appliance_names.add("Drying machine");
+        appliance_names.add("Fireplace");
+        appliance_names.add("Refrigerators");
+        appliance_names.add("Vacuum cleaner");
+        appliance_names.add("Electric Water heater");
+        appliance_names.add("Window Fan");
+        appliance_names.add("ceiling fan");
+        appliance_names.add("Dishwasher");
+        appliance_names.add("Hair dryer");
+        appliance_names.add("Icebox");
+        appliance_names.add("Humidifier");
+        appliance_names.add("Clothes iron");
+        appliance_names.add("Oven");
+        appliance_names.add("Sewing machine");
+        appliance_names.add("Stove");
+        appliance_names.add("Vacuum cleaner");
+        appliance_names.add("Television");
+
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, appliance_names);
@@ -33,33 +58,31 @@ public class MainActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(dataAdapter);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this,Main2Activity.class);
-                intent.putExtra("data",String.valueOf(spin.getSelectedItem()));
-                startActivity(intent);
-                }
-            });
+                TextView txt = (TextView) findViewById(R.id.textView2);
+                txt.setText(spin.getSelectedItem().toString() + ": " + etEnter.getText().toString() + " Watts");
+            }
+        });
         }
 
-        //@Override
+        @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             // On selecting a spinner item
             String item = parent.getItemAtPosition(position).toString();
+
 
             // Showing selected spinner item
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
 
         }
+        public void Appliance_Selected(View view){
 
+        }
         public void onNothingSelected(AdapterView<?> arg0) {
             // TODO Auto-generated method stub
 
-        }
-        public void buttonOne(View view){
-            Toast b1 = Toast.makeText(this, "IT WORKED", Toast.LENGTH_SHORT);
-            b1.show();
         }
         public void test(View view){
             TextView countView = (TextView) findViewById(R.id.textView);
@@ -71,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             countView.setText(Integer.toString(count));
         }
+
     //public void getIT(View view){
         //EditText content = (EditText)findViewById(R.id.EditText_1);
 
@@ -84,6 +108,5 @@ public class MainActivity extends AppCompatActivity {
 
         //TextView text = (TextView)findViewById(R.id.textView2);
         //text.setText(result);
-    //}
-
 }
+

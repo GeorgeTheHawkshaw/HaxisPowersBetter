@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">Haxis Powers Better</string>
     <string name="hello_world_text">Welcome</string>
     <string name="Button_one">click me</string>
     <string name="button_two">click me</string>
@@ -7,4 +7,9 @@
     <string name="enter_appliance_name_text">Enter Appliance name</string>
     <string name="Number_text">0</string>
     <string name="textviewtwo_text">TextView</string>
+    <string name="application_text">Application</string>
+    <string name="add_application_wattage_text">Add application wattage</string>
+    <string name="enter_appliance_wattage_text">Enter Appliance Wattage</string>
+    <string name="dont_press_text">DONT PRESS</string>
+    <string name="select_application_text">Select Application</string>
 </resources>
