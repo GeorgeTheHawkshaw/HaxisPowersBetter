@@ -3,6 +3,9 @@ package com.example.test;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void buttonOne(View view){
-        b1 button = b1.makeText(this, "IT WORKED", b1.LENGTH_SHORT);
+        Toast b1 = Toast.makeText(this, "IT WORKED", Toast.LENGTH_SHORT);
         b1.show();
     }
     public void test(View view){
@@ -20,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         String countString = countView.getText().toString();
 
-        Integer count = Integet.parseInt(countString);
+        Integer count = Integer.parseInt(countString);
         count++;
 
-        countView.setText(count.toString);
+        countView.setText(count.toString());
     }
 }
