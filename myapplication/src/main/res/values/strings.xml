@@ -1,0 +1,10 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="Haxis_Powers">My Application</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="Description_text"/>
+    <string name="Username_text">Welcome, USERNAME</string>
+    <string name="Dash_text">Dashboard:</string>
+    <string name="News_text">Welcome to APPNAME version 1.0!</string>
+    <string name="Appliance_text">~~~connected appliance go here~~~</string>
+</resources>
